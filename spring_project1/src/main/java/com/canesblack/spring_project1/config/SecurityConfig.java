@@ -32,7 +32,7 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		// 스프링 시큐리티 기능을 사용하고자 할떄 메소드안에 작성한다.
-		http.csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())) // csrf 해킹 기법으로 보호조치를
+		http.csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())) // csrf 해킹 기법으로 보호조치를 csrf 확인
 																									// 코드방법
 				.cors(cors -> cors.configurationSource(corsCorsConfigurationSource())) // cors는 특정서버로만 데이터를 넘길수있도록 설정
 				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)) // 세션 설정
