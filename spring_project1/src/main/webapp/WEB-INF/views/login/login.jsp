@@ -1,34 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>�α���������</title>
+<title>로그인페이지</title>
+<link rel="stylesheet" type ="text/css" href="${pageContext.request.contextPath}resources/css/login/style.css">
 </head>
 <body>
 	<%@ include file="/WEB-INF/views/common/header.jsp"%>
-
 	<div id="login-container-wrapper">
 		<div id="login-container">
-			<h2>�α���</h2>
-			<!--  form�� ���� �����͸� POST(��ȣȭ) �ѱ�� -->
+			<h2>로그인</h2>
+			<!--  form에 받은 데이터를 POST(암호화) 넘긴다 -->
 			<form action ="${pagecontext.request.contextPath }/login" method="post">
 				<div class="input-group">
-					<label for="username">���̵�</label> <input type="text" id="username"
-						name="username" required="���̵� �Է��ϼ���" />
+					<label for="username">아이디</label> <input type="text" id="username"
+						name="username" required="아이디를 입력하세요" />
 				</div>
 
 				<div class="input-group">
-					<label for="password">��й�ȣ</label> <input type="password" id="password"
-						name="password" required="��й�ȣ�� �Է��ϼ���" />
+					<label for="password">비밀번호</label> <input type="password" id="password"
+						name="password" required="비밀번호를 입력하세요" />
 				</div>
-				<button type="submit" id="login-button">�α���</button>
+				<button type="submit" id="login-button">로그인</button>
 			</form>
 
 			<div id="register-link">
-			<!-- �ֻ��� ��� �̵� -->
-			<a href="${pageContext.request.contextPath}/register">ȸ������</a>
+			<!-- 최상위 경로 이동 -->
+			<a href="${pageContext.request.contextPath}/register">회원가입</a>
 			</div>
 
 
